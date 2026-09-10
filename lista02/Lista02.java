@@ -1,4 +1,4 @@
-package br.com.seunome.lista02;
+package br.com.joao.lista02;
 
 import java.util.Scanner;
 
