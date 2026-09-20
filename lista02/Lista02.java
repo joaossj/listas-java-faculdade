@@ -1,4 +1,3 @@
-```java
 package br.com.joao.lista02;
 
 import java.util.Scanner;
@@ -202,4 +201,99 @@ public class Main {
             if (saldo < saque)
                 System.out.println("Saldo insuficiente");
             else if (saque > limite)
-```
+                System.out.println("Passou do limite diario");
+            else
+                System.out.printf("Saque feito. Saldo: R$ %.2f\n", saldo - saque);
+            break;
+
+        case 13:
+            System.out.print("Numero 1: ");
+            double a = ler.nextDouble();
+
+            System.out.print("Numero 2: ");
+            double b = ler.nextDouble();
+
+            System.out.print("Opcao (1 a 4): ");
+            int op = ler.nextInt();
+
+            if (op == 1)
+                System.out.println("Resultado: " + (a + b));
+            else if (op == 2)
+                System.out.println("Resultado: " + (a - b));
+            else if (op == 3)
+                System.out.println("Resultado: " + (a * b));
+            else if (op == 4) {
+                if (b == 0)
+                    System.out.println("Nao pode dividir por zero");
+                else
+                    System.out.println("Resultado: " + (a / b));
+            } else {
+                System.out.println("Opcao invalida");
+            }
+            break;
+
+        case 14:
+            System.out.print("Mes: ");
+            int mes = ler.nextInt();
+
+            if (mes == 2)
+                System.out.println("28 dias");
+            else if (mes == 4 || mes == 6 || mes == 9 || mes == 11)
+                System.out.println("30 dias");
+            else if (mes >= 1 && mes <= 12)
+                System.out.println("31 dias");
+            else
+                System.out.println("Mes invalido");
+            break;
+
+        case 15:
+            System.out.print("Tipo (1 carro, 2 moto): ");
+            int tipo = ler.nextInt();
+
+            double tarifa;
+
+            if (tipo == 1)
+                tarifa = 8;
+            else if (tipo == 2)
+                tarifa = 5;
+            else {
+                System.out.println("Opcao invalida");
+                break;
+            }
+
+            System.out.print("Horas: ");
+            int horas = ler.nextInt();
+
+            double valor = tarifa * horas;
+
+            ler.nextLine();
+            System.out.print("Tem cupom? (sim/nao): ");
+            String cupom = ler.nextLine();
+
+            if (cupom.equalsIgnoreCase("sim") && valor >= 50)
+                valor = valor * 0.80;
+
+            if (horas > 12)
+                System.out.println("Permanencia longa");
+
+            if (horas > 24)
+                System.out.println("Cobranca de diaria");
+
+            if (horas <= 2)
+                System.out.println("Permanencia curta");
+            else if (horas <= 6)
+                System.out.println("Permanencia media");
+            else
+                System.out.println("Permanencia longa");
+
+            System.out.printf("Valor final: R$ %.2f\n", valor);
+            break;
+
+        default:
+            System.out.println("Opcao invalida");
+        }
+
+        ler.close();
+    }
+}
+
