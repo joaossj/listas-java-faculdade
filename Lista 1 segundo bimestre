@@ -1,0 +1,232 @@
+import java.util.Scanner;
+
+public class Lista04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // ---------- EXERCICIO 1 ----------
+        System.out.println("--- Exercicio 1 ---");
+        double[] notas1 = {7.5, 6.0, 8.0, 5.5};
+
+        System.out.println("Quantidade de notas: " + notas1.length);
+        System.out.println("Primeira nota: " + notas1[0]);
+        System.out.println("Ultima nota: " + notas1[notas1.length-1]);
+
+
+        // ---------- EXERCICIO 2 ----------
+        System.out.println("\n--- Exercicio 2 ---");
+        double[] precos2 = new double[3];
+
+        precos2[0] = 12.90;
+        precos2[1] = 5.50;
+        precos2[2] = 30.00;
+
+        for(int i = 0; i < precos2.length; i++) {
+            System.out.printf("Produto %d: R$ %.2f\n", i+1, precos2[i]);
+        }
+
+
+        // ---------- EXERCICIO 3 ----------
+        System.out.println("\n--- Exercicio 3 ---");
+        double[] notas3 = new double[4];
+        double soma3 = 0;
+
+        for(int i = 0; i < notas3.length; i++){
+            System.out.print("Digite a nota " + (i+1) + ": ");
+            notas3[i] = sc.nextDouble();
+            soma3 = soma3 + notas3[i];
+        }
+
+        double media3 = soma3 / 4;
+        System.out.printf("Media: %.2f\n", media3);
+
+        if(media3 >= 6){
+            System.out.println("Aprovado");
+        }
+        else{
+            System.out.println("Reprovado");
+        }
+
+
+        // ---------- EXERCICIO 4 ----------
+        System.out.println("\n--- Exercicio 4 ---");
+        double[] preco4 = new double[5];
+        double total4 = 0;
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Preco do produto " + (i + 1) + ": ");
+            preco4[i] = sc.nextDouble();
+            total4 += preco4[i];
+        }
+
+        System.out.println("Precos lidos:");
+        for (int j = 0; j < 5; j++) {
+            System.out.println("R$ " + preco4[j]);
+        }
+
+        System.out.printf("Total da compra: R$ %.2f\n", total4);
+
+
+        // ---------- EXERCICIO 5 ----------
+        System.out.println("\n--- Exercicio 5 ---");
+        double[] preco5 = new double[5];
+        double[] precoDesc = new double[5];
+
+        for(int i=0; i<5; i++){
+            System.out.print("Digite o preco do produto " + (i+1) + ": ");
+            preco5[i] = sc.nextDouble();
+            precoDesc[i] = preco5[i] - (preco5[i] * 10 / 100);
+        }
+
+        System.out.println();
+
+        for(int i=0; i<5; i++){
+            System.out.printf("Produto %d: original R$ %.2f / com desconto R$ %.2f\n", i+1, preco5[i], precoDesc[i]);
+        }
+
+
+        // ---------- EXERCICIO 6 ----------
+        System.out.println("\n--- Exercicio 6 ---");
+        System.out.print("Valor do emprestimo: ");
+        double valor = sc.nextDouble();
+        System.out.print("Taxa de juros mensal (%): ");
+        double taxa = sc.nextDouble();
+
+        double[] devido = new double[12];
+
+        for(int mes = 1; mes <= 12; mes++){
+            devido[mes-1] = valor + valor * taxa / 100 * mes;
+        }
+
+        for(int k = 0; k < devido.length; k++){
+            System.out.printf("Mes %d: R$ %.2f\n", k+1, devido[k]);
+        }
+
+
+        // ---------- EXERCICIO 7 ----------
+        System.out.println("\n--- Exercicio 7 ---");
+        double[] salarios = new double[6];
+        double soma7 = 0;
+
+        for (int i = 0; i < salarios.length; i++) {
+            System.out.print("Salario do funcionario " + (i+1) + ": ");
+            salarios[i] = sc.nextDouble();
+            soma7 += salarios[i];
+        }
+
+        double maior = salarios[0];
+        double menor = salarios[0];
+
+        for (int i = 1; i < salarios.length; i++) {
+            if (salarios[i] > maior) {
+                maior = salarios[i];
+            }
+            if (salarios[i] < menor) {
+                menor = salarios[i];
+            }
+        }
+
+        double media7 = soma7 / salarios.length;
+
+        // contar quem ganha acima da media
+        int cont = 0;
+        for (int i = 0; i < salarios.length; i++) {
+            if (salarios[i] > media7)
+                cont++;
+        }
+
+        System.out.printf("Maior salario: R$ %.2f\n", maior);
+        System.out.printf("Menor salario: R$ %.2f\n", menor);
+        System.out.printf("Media: R$ %.2f\n", media7);
+        System.out.println("Acima da media: " + cont);
+
+
+        // ---------- EXERCICIO 8 ----------
+        System.out.println("\n--- Exercicio 8 ---");
+        double[] notas8 = new double[10];
+        int aprov = 0;
+        int recup = 0;
+        int reprov = 0;
+
+        for(int i = 0; i < 10; i++){
+            System.out.print("Nota do aluno " + (i+1) + ": ");
+            notas8[i] = sc.nextDouble();
+
+            if(notas8[i] >= 6){
+                aprov++;
+            }else if(notas8[i] >= 4){
+                recup++;
+            }else{
+                reprov++;
+            }
+        }
+
+        System.out.println("Aprovados: " + aprov);
+        System.out.println("Recuperacao: " + recup);
+        System.out.println("Reprovados: " + reprov);
+
+
+        // ---------- EXERCICIO 9 ----------
+        System.out.println("\n--- Exercicio 9 ---");
+        int[] codigos = {101, 205, 310, 420, 550};
+        double[] precos9 = {4.50, 12.00, 7.90, 25.00, 3.20};
+
+        System.out.print("Digite o codigo: ");
+        int cod = sc.nextInt();
+
+        boolean achou = false;
+
+        for(int i = 0; i < codigos.length; i++){
+            if(codigos[i] == cod){
+                System.out.printf("Preco: R$ %.2f\n", precos9[i]);
+                achou = true;
+            }
+        }
+
+        if(achou == false){
+            System.out.println("Produto nao encontrado");
+        }
+
+
+        // ---------- EXERCICIO 10 ----------
+        System.out.println("\n--- Exercicio 10 ---");
+        System.out.print("Quantidade de itens: ");
+        int n = sc.nextInt();
+
+        if(n < 1){
+            System.out.println("Quantidade invalida!");
+            return;
+        }
+
+        double[] preco10 = new double[n];
+        int[] qtd = new int[n];
+
+        for(int i = 0; i < n; i++){
+            System.out.print("Preco unitario do item " + (i+1) + ": ");
+            preco10[i] = sc.nextDouble();
+            System.out.print("Quantidade do item " + (i+1) + ": ");
+            qtd[i] = sc.nextInt();
+        }
+
+        double total10 = 0;
+
+        for(int i = 0; i < n; i++){
+            double sub = preco10[i] * qtd[i];
+            System.out.printf("Item %d - subtotal: R$ %.2f\n", i+1, sub);
+            total10 += sub;
+        }
+
+        System.out.printf("Total: R$ %.2f\n", total10);
+
+        double desc = 0;
+        if(total10 > 200){
+            desc = total10 * 5 / 100;
+            System.out.printf("Desconto de 5%%: R$ %.2f\n", desc);
+        }
+
+        double pagar = total10 - desc;
+        System.out.printf("Valor final a pagar: R$ %.2f\n", pagar);
+
+        sc.close();
+    }
+}
