@@ -4,8 +4,8 @@ public class Lista04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // ---------- EXERCICIO 1 ----------
-        System.out.println("--- Exercicio 1 ---");
+        // EXERCICIO 1 
+        System.out.println("Exercicio 1");
         double[] notas1 = {7.5, 6.0, 8.0, 5.5};
 
         System.out.println("Quantidade de notas: " + notas1.length);
@@ -13,8 +13,8 @@ public class Lista04 {
         System.out.println("Ultima nota: " + notas1[notas1.length-1]);
 
 
-        // ---------- EXERCICIO 2 ----------
-        System.out.println("\n--- Exercicio 2 ---");
+        // EXERCICIO 2
+        System.out.println("\nExercicio 2");
         double[] precos2 = new double[3];
 
         precos2[0] = 12.90;
@@ -26,8 +26,8 @@ public class Lista04 {
         }
 
 
-        // ---------- EXERCICIO 3 ----------
-        System.out.println("\n--- Exercicio 3 ---");
+        // EXERCICIO 3 
+        System.out.println("\nExercicio 3");
         double[] notas3 = new double[4];
         double soma3 = 0;
 
@@ -48,8 +48,8 @@ public class Lista04 {
         }
 
 
-        // ---------- EXERCICIO 4 ----------
-        System.out.println("\n--- Exercicio 4 ---");
+        // EXERCICIO 4 
+        System.out.println("\nExercicio 4");
         double[] preco4 = new double[5];
         double total4 = 0;
 
@@ -67,8 +67,8 @@ public class Lista04 {
         System.out.printf("Total da compra: R$ %.2f\n", total4);
 
 
-        // ---------- EXERCICIO 5 ----------
-        System.out.println("\n--- Exercicio 5 ---");
+        // EXERCICIO 5
+        System.out.println("\nExercicio 5");
         double[] preco5 = new double[5];
         double[] precoDesc = new double[5];
 
@@ -85,8 +85,8 @@ public class Lista04 {
         }
 
 
-        // ---------- EXERCICIO 6 ----------
-        System.out.println("\n--- Exercicio 6 ---");
+        // EXERCICIO 6
+        System.out.println("\nExercicio 6");
         System.out.print("Valor do emprestimo: ");
         double valor = sc.nextDouble();
         System.out.print("Taxa de juros mensal (%): ");
@@ -103,8 +103,8 @@ public class Lista04 {
         }
 
 
-        // ---------- EXERCICIO 7 ----------
-        System.out.println("\n--- Exercicio 7 ---");
+        // EXERCICIO 7
+        System.out.println("\nExercicio 7");
         double[] salarios = new double[6];
         double soma7 = 0;
 
@@ -141,8 +141,8 @@ public class Lista04 {
         System.out.println("Acima da media: " + cont);
 
 
-        // ---------- EXERCICIO 8 ----------
-        System.out.println("\n--- Exercicio 8 ---");
+        // EXERCICIO 8
+        System.out.println("\nExercicio 8");
         double[] notas8 = new double[10];
         int aprov = 0;
         int recup = 0;
@@ -166,8 +166,8 @@ public class Lista04 {
         System.out.println("Reprovados: " + reprov);
 
 
-        // ---------- EXERCICIO 9 ----------
-        System.out.println("\n--- Exercicio 9 ---");
+        // EXERCICIO 9
+        System.out.println("\nExercicio 9");
         int[] codigos = {101, 205, 310, 420, 550};
         double[] precos9 = {4.50, 12.00, 7.90, 25.00, 3.20};
 
@@ -188,8 +188,8 @@ public class Lista04 {
         }
 
 
-        // ---------- EXERCICIO 10 ----------
-        System.out.println("\n--- Exercicio 10 ---");
+        // EXERCICIO 10
+        System.out.println("\nExercicio 10");
         System.out.print("Quantidade de itens: ");
         int n = sc.nextInt();
 
