@@ -1,4 +1,4 @@
-public class exercicio 01 {
+public class Exercicio01 {
     public static void main(String[] args) {
         System.out.println("Notas do aluno");
         System.out.println("O trecho vai mostrar a quantidade de notas, a primeira e a ultima nota.");
